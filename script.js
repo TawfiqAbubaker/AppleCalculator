@@ -20,8 +20,6 @@ miniTextArea.style.cssText = "color: #141414;"
 
 for(const numberButton of numberButtons){
     numberButton.addEventListener('click', function(){
-        console.log(firstNumber.length)
-        console.log(firstNumber.length)
         if((firstNumber.length <= 10 && first == true)|| (secondNumber.length <= 10 && first==false)){
             if(first == true){
                 if(numberButton.textContent == "." && dotUsedFirst == false){
@@ -154,12 +152,12 @@ function length_adjuster(){
         textArea.style.cssText = "font-size: 50px;"
     }
     if(operationsNumber >= 10){
-        textArea.style.cssText = "font-size: 40px; padding-bottom: 51px;"
+        textArea.style.cssText = "font-size: 40px; padding-bottom: 32px;"
     }
     if(operationsNumber >= 13){
-        textArea.style.cssText = "font-size: 30px; padding-bottom: 63px;"
+        textArea.style.cssText = "font-size: 30px; padding-bottom: 43px;"
     }
     if(operationsNumber >= 17){
-        textArea.style.cssText = "font-size: 20px; padding-bottom: 74px;"
+        textArea.style.cssText = "font-size: 20px; padding-bottom: 55px;"
     }
 }
