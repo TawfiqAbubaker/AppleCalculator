@@ -1,0 +1,234 @@
+body{
+    background-color: #1f1f1f;
+    margin:0;
+    margin-top: 30px;
+   
+}
+.calculator{
+    width:340px;
+    height:650px;
+    margin:auto;
+    margin-top:20px;
+    border-radius: 50px;
+    background-color: #141414;
+    font-family: Helvetica, Arial, sans-serif;
+    animation: boxShadow 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
+    animation-fill-mode: forwards;
+
+}
+.textArea{
+    width:80%;
+    margin:auto;
+    padding-top:20px;    
+}
+.textArea p {
+    color: white;
+    text-align: right;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    pointer-events: none;
+}
+.textArea h4 {
+    background-color: #141414;
+    color: white;
+    width: 100%;
+    padding-top: 20px;
+    padding-right: 10px;;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    text-align: right;
+}
+
+.buttons{
+    display:flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.buttons .topButtons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+.buttons button{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin:3px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.grey{
+    background-color: #a4a4a4;
+    font-size: 23px;
+}
+.operators,#equals{
+    background-color: #ef9228;
+    color: #fff4db;
+    font-size: 23px;
+}
+.numbers{
+    background-color: #323232;
+    color: #fff4db;
+    font-size: 23px;
+}
+.bottomButtons{
+    margin-left: 10px;
+    
+}
+.bottomButtons button{
+    margin-right: 7px;
+}
+#equals{
+    margin-left: 7px;
+}
+#zero{
+    width: 140px;
+    border-radius: 40px;
+
+}
+#substract{
+    font-size: 30px;
+}
+#outlineImg{
+    pointer-events: none;
+    height:650px;
+    width: 340px;
+    position: absolute;
+    margin-top: 8px;
+    top: 315px;  
+    left: 50%; 
+    padding-left: 2px;
+    transform: translate(-50%, -50%);
+}
+#appleLogo{
+    position: absolute;
+    width:300px;
+    left: 50%; 
+    padding-left: 2px;
+    top:50%;
+    transform: translate(-50%, -50%);
+    z-index: 4000;
+    opacity: 0;
+    animation: intro 2s 0.5s cubic-bezier(0.4, 0.1, 0.165, 1),
+                outro 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
+    animation-fill-mode: forwards
+}
+.calculatorAndImg{
+    opacity:0;
+    animation: calculatorAppears 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+
+.numbers:hover{
+    animation: scaleUpBtn 0.3s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes scaleUpBtn{
+    0%{
+       background-color: #323232;
+    }
+    100%{
+        background-color: #4d4d4d;
+    }
+}
+
+.operators:hover,#equals:hover{
+    animation: scaleUpBtn2 0.3s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes scaleUpBtn2{
+    0%{
+       background-color: #ef9228;
+    }
+    100%{
+        background-color: rgb(226, 164, 88)
+    }
+}
+
+.grey:hover{
+    animation: scaleUpBtn3 0.3s ease-out;
+    animation-fill-mode: both;
+}
+@keyframes scaleUpBtn3{
+    0%{
+       background-color: #a4a4a4;;
+    }
+    100%{
+        background-color: #727272;
+    }
+}
+
+@keyframes intro {
+    0%{
+        width: 300px;
+        opacity: 0;
+    }
+    100%{
+        width: 450px;
+        opacity: 1;
+    }
+}
+@keyframes outro{
+    0%{
+        width:450px;
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;
+        width:300px;
+    }
+    100%{
+        z-index: -1;
+    }
+}
+@keyframes calculatorAppears{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        transform:scale(1);
+        opacity: 1;
+    }
+}
+@keyframes boxShadow{
+    0%{
+        box-shadow: 0px 0px 000px rgb(85, 85, 85);
+    }
+    100%{
+        box-shadow: 0px 0px 600px rgb(85, 85, 85);
+    }
+}
+.disclaimer h3,h4{
+    color: #a4a4a4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    margin: 0;
+    font-size: smaller;
+}
+.disclaimer{
+    width: 260px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: text 2s 5s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes text {
+    0%{
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
