@@ -85,6 +85,7 @@ equalsButton.addEventListener('click', function(){
     first = true;
     operationsNumber = textArea.textContent.length;
     operatorNumber = 0;
+    length_adjuster();
 })
 c.addEventListener('click', function(){
     operatorNumber = 0;
@@ -152,12 +153,12 @@ function length_adjuster(){
         textArea.style.cssText = "font-size: 50px;"
     }
     if(operationsNumber >= 10){
-        textArea.style.cssText = "font-size: 40px; padding-bottom: 32px;"
+        textArea.style.cssText = "font-size: 40px"
     }
     if(operationsNumber >= 13){
-        textArea.style.cssText = "font-size: 30px; padding-bottom: 43px;"
+        textArea.style.cssText = "font-size: 30px"
     }
     if(operationsNumber >= 17){
-        textArea.style.cssText = "font-size: 20px; padding-bottom: 55px;"
+        textArea.style.cssText = "font-size: 20px"
     }
 }
