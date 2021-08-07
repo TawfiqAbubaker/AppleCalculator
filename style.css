@@ -199,22 +199,22 @@ body{
 
 @keyframes intro {
     0%{
-        width: 300px;
+        width: 100px;
         opacity: 0;
     }
     100%{
-        width: 450px;
+        width: 250px;
         opacity: 1;
     }
 }
 @keyframes outro{
     0%{
-        width:450px;
+        width:250px;
         opacity: 1;
     }
     99%{
         opacity: 0;
-        width:300px;
+        width:50px;
     }
     100%{
         z-index: -1;
