@@ -14,12 +14,13 @@ body{
     font-family: Helvetica, Arial, sans-serif;
     animation: boxShadow 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
     animation-fill-mode: forwards;
+    position: relative;
 
 }
 .textArea{
-    width:80%;
     margin:auto;
-    padding-top:20px;    
+    padding-top:20px;  
+    overflow-wrap: break-word; 
 }
 .textArea p {
     color: white;
@@ -31,6 +32,7 @@ body{
 .lowerTextArea{
     height: 100px;
     display: flex;
+    padding: 0px 30px;
     align-items: center;
 
 }
@@ -43,6 +45,15 @@ body{
     font-size: 50px;
     font-weight: 400;
     text-align: right;
+}
+.textResult{
+    width: 77%;
+    height: 90px;
+    margin: auto;
+    overflow-wrap: break-word;
+}
+.textResult p{
+    margin-bottom: 0;
 }
 
 .buttons{
@@ -100,6 +111,21 @@ body{
 }
 #outlineImg{
     pointer-events: none;
+    height:651px;
+    width: 349px;
+    position: absolute;
+    
+}
+#topNotificationsImg{
+    pointer-events: none;
+    position: absolute;
+    width: 270px;
+    left: 49px;
+    opacity: 1;
+    top: 18px;
+}
+/* #outlineImg{
+    pointer-events: none;
     height:650px;
     width: 340px;
     position: absolute;
@@ -108,7 +134,7 @@ body{
     left: 50%; 
     padding-left: 2px;
     transform: translate(-50%, -50%);
-}
+} */
 #appleLogo{
     position: absolute;
     width:300px;
@@ -218,6 +244,7 @@ body{
     }
     100%{
         z-index: -1;
+        opacity: 0;
     }
 }
 @keyframes calculatorAppears{
@@ -246,8 +273,9 @@ body{
     font-size: smaller;
 }
 .disclaimer h4{
-    letter-spacing: 1px;
+    letter-spacing: 2.5px;
 }
+
 .disclaimer h3{
     letter-spacing: 2.5px;
 }

@@ -45,6 +45,10 @@ for(const numberButton of numberButtons){
                 }
                 
             }
+            if(numberButton.textContent == "." && dotUsedFirst == true){
+                textArea.textContent = firstNumber + operator + secondNumber;
+                return
+            }
             textArea.textContent = firstNumber + operator + secondNumber;
             operationsNumber += 1; 
             length_adjuster();
@@ -83,6 +87,12 @@ equalsButton.addEventListener('click', function(){
     secondNumber = "";
     operator = "";
     first = true;
+    dotUsedSecond = false;
+    dotUsedFirst = true;
+    if(textArea.textContent % 1 == 0 ){
+        dotUsedFirst = false;
+
+    }
     operationsNumber = textArea.textContent.length;
     operatorNumber = 0;
     length_adjuster();
