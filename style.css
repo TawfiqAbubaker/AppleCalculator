@@ -4,18 +4,29 @@ body{
     margin-top: 30px;
    
 }
+.calculatorAndImg{
+    /* margin-top: -34px; */
+    opacity:0;
+    animation: calculatorAppears 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
+    animation-fill-mode: forwards;
+    /* height: 92vh; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .calculator{
-    width:340px;
-    height:650px;
-    margin:auto;
-    margin-top:20px;
+    width: 340px;
+    height: 650px;
+    margin: auto;
+    /* margin-top: 40px; */
     border-radius: 50px;
     background-color: #141414;
     font-family: Helvetica, Arial, sans-serif;
     animation: boxShadow 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
     animation-fill-mode: forwards;
     position: relative;
-
+    /* margin-bottom: 10px; */
 }
 .textArea{
     margin:auto;
@@ -76,7 +87,6 @@ body{
     border: none;
     margin-bottom: 15px;
 }
-
 .grey{
     background-color: #a4a4a4;
     font-size: 23px;
@@ -98,13 +108,20 @@ body{
 .bottomButtons button{
     margin-right: 7px;
 }
+.CentererDiv{
+    height: 92vh;
+    align-items: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    width: 365px;
+}
 #equals{
     margin-left: 7px;
 }
 #zero{
     width: 140px;
     border-radius: 40px;
-
 }
 #substract{
     font-size: 30px;
@@ -113,8 +130,7 @@ body{
     pointer-events: none;
     height:651px;
     width: 349px;
-    position: absolute;
-    
+    position: absolute; 
 }
 #topNotificationsImg{
     pointer-events: none;
@@ -176,12 +192,7 @@ body{
     animation: bg3 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
     animation-fill-mode: forwards;
 }
-.calculatorAndImg{
-    margin-top: -34px;
-    opacity:0;
-    animation: calculatorAppears 2s 2.5s cubic-bezier(0.6, 0.1, 0.165, 1);
-    animation-fill-mode: forwards;
-}
+
 
 
 .numbers:hover{
